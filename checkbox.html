@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style type="text/css">
+    #wrapper{
+      border:solid red 2.5px;
+      padding:5px;
+      margin:10px;
+    }
+  </style>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+<div id = "wrapper">
+
+</div>
+<script type = "text/javascript">
+ function checkBox(){
+  var a = "<input type = 'checkbox'/>";
+  var b = "";
+  for (var i = 0; i < 3300; i++){
+    b = b + a;
+  }
+  document.getElementById("wrapper").innerHTML = b;
+ }
+ checkBox();
+ function bindListeners () {
+
+   var checkboxes = document.querySelectorAll('input[type=checkbox]');
+
+   for(var i=0; i < checkboxes.length; i++) {
+     checkboxes[i].addEventListener('mouseover', function(event) {
+
+       event.target.setAttribute('checked', "true");
+
+
+     });
+
+   }
+ }
+ bindListeners();
+
+
+
+/* function mouseOver(){
+   var x = document.querySelectorAll('input[type = "checkbox"]');
+   for (var in = 0; in <x.length; in++){
+     x[in].addEventListener('mouseover',function(event){
+       event.target.attr("checked","true");;
+     });   */
+
+  mouseOver();
+
+</script>
+
+</body>
+</html>
